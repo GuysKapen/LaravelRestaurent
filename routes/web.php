@@ -21,6 +21,10 @@ Route::get('/redirects', [HomeController::class, "redirects"]);
 
 Route::get('/users', [AdminController::class, "users"]);
 
+Route::get('/food/new', [AdminController::class, 'foodNew']);
+
+Route::post('/food/create', [AdminController::class, 'foodCreate']);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
