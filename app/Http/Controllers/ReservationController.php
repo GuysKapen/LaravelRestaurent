@@ -33,4 +33,9 @@ class ReservationController extends Controller
         return redirect()->back();
 
     }
+
+    public function reservations() {
+        $data = Reservation::all();
+        return view('admin.reservations', compact('data'));
+    }
 }

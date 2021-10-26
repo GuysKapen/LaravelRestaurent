@@ -34,6 +34,8 @@ Route::post('/food/update/{id}', [AdminController::class, 'foodUpdate']);
 
 Route::post('/reservation/create', [ReservationController::class, 'create']);
 
+Route::get('/reservations', [ReservationController::class, 'reservations']);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
