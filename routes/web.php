@@ -23,6 +23,8 @@ Route::get('/users', [AdminController::class, "users"]);
 
 Route::get('/food/new', [AdminController::class, 'foodNew']);
 
+Route::get('/foods', [AdminController::class, 'foods']);
+
 Route::post('/food/create', [AdminController::class, 'foodCreate']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

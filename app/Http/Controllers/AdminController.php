@@ -20,6 +20,12 @@ class AdminController extends Controller
         return view('admin.food-new');
     }
 
+    public function foods()
+    {
+        $data = Food::all();
+        return view('admin.foods', compact('data'));
+    }
+
     public function foodCreate(Request $request)
     {
         if (!isset($request->image) ||
