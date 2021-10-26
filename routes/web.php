@@ -27,6 +27,10 @@ Route::get('/foods', [AdminController::class, 'foods']);
 
 Route::post('/food/create', [AdminController::class, 'foodCreate']);
 
+Route::get('/food/edit/{id}', [AdminController::class, 'foodEdit']);
+
+Route::post('/food/update/{id}', [AdminController::class, 'foodUpdate']);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

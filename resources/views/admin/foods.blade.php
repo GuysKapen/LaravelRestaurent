@@ -58,8 +58,10 @@
                                     ${{$food->price}}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
-                                    <a href="#" onclick="return confirm('Are you sure?')" class="text-red-600 hover:text-indigo-900">Delete</a>
+                                    <a href="/food/update/{{$food->id}}"
+                                       class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
+                                    <a href="#" onclick="return confirm('Are you sure?')"
+                                       class="text-red-600 hover:text-indigo-900">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

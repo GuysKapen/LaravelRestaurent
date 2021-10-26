@@ -11,6 +11,7 @@ use phpDocumentor\Reflection\Types\Nullable;
  * @property mixed|float $price
  * @property mixed|string $name
  * @property mixed|Nullable|string description
+ * @method static Food find($id)
  */
 class Food extends Model
 {
