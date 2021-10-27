@@ -28,8 +28,11 @@ class FoodController extends Controller
         $food->name = $request->name;
         $food->price = $request->price;
         $food->description = $request->description ?? null;
-        $food->save();
-
+        if ($food->save()) {
+            notify()->success('Save food successfully!');
+        } else {
+            notify()->error('Error when saving food!');
+        }
         return redirect()->back();
     }
 
@@ -59,7 +62,11 @@ class FoodController extends Controller
         $food->name = $request->name;
         $food->price = $request->price;
         $food->description = $request->description ?? null;
-        $food->save();
+        if ($food->save()) {
+            notify()->success('Save food successfully!');
+        } else {
+            notify()->error('Error when updating food!');
+        }
 
         return redirect()->back();
     }

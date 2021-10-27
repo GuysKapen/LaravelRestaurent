@@ -26,7 +26,11 @@ class ChefController extends Controller
         $chef->speciality = $request->speciality;
         $chef->description = $request->description ?? null;
 
-        $chef->save();
+        if ($chef->save()) {
+            notify()->success('Save chef successfully!');
+        } else {
+            notify()->error('Error when saving chef!');
+        }
         return redirect()->back();
     }
 

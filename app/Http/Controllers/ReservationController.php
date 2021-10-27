@@ -29,7 +29,11 @@ class ReservationController extends Controller
         $reservation->time = $request->time;
         $reservation->message = $request->message ?? null;
 
-        $reservation->save();
+        if ($reservation->save()) {
+            notify()->success('Make reservation successfully!');
+        } else {
+            notify()->error('Error when making reservation!');
+        }
         return redirect()->back();
 
     }
