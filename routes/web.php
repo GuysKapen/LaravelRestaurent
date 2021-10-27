@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ChefController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,10 @@ Route::post('/food/update/{id}', [AdminController::class, 'foodUpdate']);
 Route::post('/reservation/create', [ReservationController::class, 'create']);
 
 Route::get('/reservations', [ReservationController::class, 'reservations']);
+
+Route::get('/chef/new', [ChefController::class, 'new']);
+
+Route::post('/chef/create', [ChefController::class, 'create']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

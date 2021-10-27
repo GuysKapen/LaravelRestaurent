@@ -12,7 +12,7 @@
     <div class="menu-item-carousel">
         <div class="col-lg-12">
             <div class="owl-menu-item owl-carousel">
-                @foreach($data as $food)
+                @foreach($foods as $food)
                     <div class="item">
                         <div class='card' style="background-image: url('/food-images/{{$food->image}}')">
                             <div class="price"><h6>${{$food->price}}</h6></div>

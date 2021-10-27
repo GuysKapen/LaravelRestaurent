@@ -34,7 +34,7 @@
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
 
-                        @foreach($data as $food)
+                        @foreach($foods as $food)
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">

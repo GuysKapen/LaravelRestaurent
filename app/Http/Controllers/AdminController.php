@@ -22,8 +22,8 @@ class AdminController extends Controller
 
     public function foods()
     {
-        $data = Food::all();
-        return view('admin.foods', compact('data'));
+        $foods = Food::all();
+        return view('admin.foods', compact('foods'));
     }
 
     public function foodCreate(Request $request)
