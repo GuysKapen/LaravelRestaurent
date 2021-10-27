@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ChefController;
+use App\Http\Controllers\FoodController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
@@ -23,15 +24,15 @@ Route::get('/redirects', [HomeController::class, "redirects"]);
 
 Route::get('/users', [AdminController::class, "users"]);
 
-Route::get('/food/new', [AdminController::class, 'foodNew']);
+Route::get('/food/new', [FoodController::class, 'new']);
 
 Route::get('/foods', [AdminController::class, 'foods']);
 
-Route::post('/food/create', [AdminController::class, 'foodCreate']);
+Route::post('/food/create', [FoodController::class, 'create']);
 
-Route::get('/food/edit/{id}', [AdminController::class, 'foodEdit']);
+Route::get('/food/edit/{id}', [FoodController::class, 'edit']);
 
-Route::post('/food/update/{id}', [AdminController::class, 'foodUpdate']);
+Route::post('/food/update/{id}', [FoodController::class, 'update']);
 
 Route::post('/reservation/create', [ReservationController::class, 'create']);
 
