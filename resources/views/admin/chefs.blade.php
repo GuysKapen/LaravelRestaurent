@@ -25,7 +25,7 @@
                             </th>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Price
+                                Speciality
                             </th>
                             <th scope="col" class="relative px-6 py-3">
                                 <span class="sr-only">Edit</span>
@@ -34,31 +34,30 @@
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
 
-                        @foreach($foods as $food)
+                        @foreach($chefs as $chef)
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 h-10 w-10">
                                             <img class="h-10 w-10 rounded-full"
-                                                 src="/food-images/{{$food->image}}"
+                                                 src="/chef-images/{{$chef->image}}"
                                                  alt="">
                                         </div>
                                         <div class="ml-4">
                                             <div class="text-sm font-medium text-gray-900">
-                                                {{$food->name}}
+                                                {{$chef->name}}
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-900">{{$food->description}}</div>
-                                    <div class="text-sm text-gray-500">Optimization</div>
+                                    <div class="text-sm text-gray-900">{{$chef->description}}</div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    ${{$food->price}}
+                                    ${{$chef->speciality}}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="/food/edit/{{$food->id}}"
+                                    <a href="/chef/edit/{{$chef->id}}"
                                        class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
                                     <a href="#" onclick="return confirm('Are you sure?')"
                                        class="text-red-600 hover:text-indigo-900">Delete</a>

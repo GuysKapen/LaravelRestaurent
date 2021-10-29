@@ -97,11 +97,21 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('/chef/new')}}">
               <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+                <span class="menu-title">Chef New</span>
+            </a>
+        </li>
+
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{url('/chefs')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-contacts"></i>
               </span>
                 <span class="menu-title">Chefs</span>
             </a>
         </li>
+
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('/reservations')}}">
               <span class="menu-icon">
@@ -110,14 +120,17 @@
                 <span class="menu-title">Reservations</span>
             </a>
         </li>
+
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/icons/mdi.html">
+            <a class="nav-link"
+               href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
               <span class="menu-icon">
-                <i class="mdi mdi-contacts"></i>
+                <i class="mdi mdi-file-document-box"></i>
               </span>
-                <span class="menu-title">Icons</span>
+                <span class="menu-title">Documentation</span>
             </a>
         </li>
+
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <span class="menu-icon">
@@ -136,15 +149,6 @@
                     <li class="nav-item"><a class="nav-link" href="pages/samples/register.html"> Register </a></li>
                 </ul>
             </div>
-        </li>
-        <li class="nav-item menu-items">
-            <a class="nav-link"
-               href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-file-document-box"></i>
-              </span>
-                <span class="menu-title">Documentation</span>
-            </a>
         </li>
     </ul>
 </nav>

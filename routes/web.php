@@ -42,6 +42,12 @@ Route::get('/chef/new', [ChefController::class, 'new']);
 
 Route::post('/chef/create', [ChefController::class, 'create']);
 
+Route::get('/chefs', [ChefController::class, 'chefs']);
+
+Route::get('/chef/edit/{id}', [ChefController::class, 'edit']);
+
+Route::post('/chef/update/{id}', [ChefController::class, 'update']);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
